@@ -1,0 +1,112 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper .first{
+    margin-left: 275px;
+    margin-top: 100px;
+    width: 600px;
+    height: 300px;
+    background-color: aliceblue;
+    padding: 15px;
+}
+.wrapper .first i{
+    width: 85px;
+    height: 85px;
+    background-color: dodgerblue;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+.first table{
+    margin-top: 15px;
+    padding: 10px;
+    border-collapse: collapse;
+    text-align: left;
+}
+.first h3{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.first table th{
+    width:250px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.wrapper .second{
+    margin-left: 20px;
+    margin-top: 100px;
+    width: 600px;
+    height: 300px;
+    background-color: aliceblue;
+}
+#icon{
+    width: 85px;
+    height: 85px;
+    background-color: dodgerblue;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+.second h3{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.transfer_info{
+    margin-left: 10px;
+    padding:15px;
+}
+#myform{
+    margin-top: 25px;
+}
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.input-container i {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+  }
+  .input-container input:focus {
+    border: 2px solid dodgerblue;
+  }
+.transfer_info .select{
+    width:100%;
+    padding: 10px;
+    outline: none;
+    height: 50px;
+    font-size: 18px;
+}
+.transfer_info .select:focus {
+    border: 2px solid dodgerblue;
+  }
+  .transfer_info .select option{
+      font-size: 18px;
+  }
+  .btn {
+    background-color: dodgerblue;
+    margin-top: 15px;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    width:50%;
+    opacity: 0.9;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }

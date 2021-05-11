@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/customer.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>MONEY BANK</h2>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>HOME</a></li>
+                <li><a href="{% url 'customer' %}"><i class="fas fa-users"></i>CUSTOMERS</a></li>
+                <li><a href="#"><i class="fas fa-history"></i>HISTORY</a></li>
+            </ul>
+            <div class="social_media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="table">
+            <h2>TRANSFER HISTORY</h2>
+            <table class="content_table" style="width: 1250px;">
+                <tr>
+                    <th>Transfer Id</th>
+                    <th>Date of Tranfer</th>
+                    <th>Sender </th>
+                    <th>Receiver</th>
+                    <th>Transaction Amount</th>
+                </tr>
+                {% for tra in transfer %}
+                <tr>
+                    <td>{{tra.id}}</td>
+                    <td>{{tra.date}}</a></td>
+                    <td>{{tra.sender}}</td>
+                    <td>{{tra.receiver}}</td>
+                    <td>{{tra.transaction_amount}}</td>
+                </tr>
+                {% endfor %}
+               
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4552b5a7de.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>MONEY BANK</h2>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>HOME</a></li>
+                <li><a href="{% url 'customer' %}"><i class="fas fa-users"></i>CUSTOMERS</a></li>
+                <li><a href="{% url 'history' %}"><i class="fas fa-history"></i>HISTORY</a></li>
+            </ul>
+            <div class="social_media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="first">
+            <div class="sender_info">
+                <h3><i class="far fa-user-circle fa-2x"></i>sender</h3>
+                <table>
+                    <tr>
+                        <th>Sender's Name : </th>
+                        <td>{{sender.customer_name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Sender's Email : </th>
+                        <td>{{sender.customer_email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Sender's Balance : </th>
+                        <td style="font-size: 30px;font-weight: bold;">{{sender.balance}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="second">
+            <div class="transfer_info">
+                <h3><i id="icon" class="fas fa-exchange-alt fa-2x"></i>Transfer info.</h3>
+                <form id="myform"  method="POST"> 
+                    {% csrf_token %}
+                    <div class="input-container">
+                        <i  class="fas fa-rupee-sign "></i>
+                        <input type="text" placeholder="Enter Amount" name="amount"><br>
+                    </div>
+                    
+                    <select name="select" class="select">
+                        <option selected="disabeled">Select an option</option>
+                        {% for customer in customer_list %}
+                        
+                        <option value="{{customer.id}}">{{customer.customer_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn">Transfer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% for message in messages %}
+        <div class="message" style="position: absolute;bottom:0;margin-left:250px;margin-top: 100px;background-color: rgb(119, 94, 209);
+        width: 100%;padding: 15px;text-transform: uppercase;font-size: 20px;">
+            <h3 style="margin-left: 400px;">{{message}}</h3>
+        </div>
+    {% endfor %}
+</body>
+<script src="https://kit.fontawesome.com/4552b5a7de.js" crossorigin="anonymous"></script>
+</html>

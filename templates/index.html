@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>MONEY BANK</h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>HOME</a></li>
+                <li><a href="banking/customer"><i class="fas fa-users"></i>CUSTOMERS</a></li>
+                <li><a href="banking/history"><i class="fas fa-history"></i>HISTORY</a></li>
+            </ul>
+            <div class="social_media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="content">
+                <div class="header">
+                    <h2>THE SPARKS FOUNDATION #TASK 1</h2>
+                </div>
+                <div class="info">
+                    <h4>Superb Banking System By<br> - Naman Jaiswal</h4><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reiciendis ipsum recusandae cupiditate quo! Repellendus reiciendis,</p>
+                    <div class="button">
+                        <button  type="submit"><a href="banking/customer">Transfer Money </a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/strong-banking-system.jpg' %}" style="width:100%" alt="banking-image">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4552b5a7de.js" crossorigin="anonymous"></script>
+</html>
